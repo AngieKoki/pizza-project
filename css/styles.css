@@ -32,7 +32,18 @@ body{
     margin-top: 1rem;
 
 }
+.deliverySection{
+    background: url(/images/covidDelivery.jpg)no-repeat center/cover;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    color:#cc5200;
+    position: relative;
+    text-align: left;
+    overflow-y: hidden;
 
+}
 .deliveryLocation{
     display:none;
 }

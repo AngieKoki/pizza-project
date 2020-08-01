@@ -17,7 +17,7 @@
         <div class='aboutUs'>
             <h1>ABOUT US</h1>
             <p>Pizza Village is a vegan restaurant that provides you with the best vegan pizzas, handcrafted with love at very affrodable prices </p>
-            <p>ORDER YOUR PIZZA NOW</p>
+            <button class='btn btn-light' type="submit" id='orderNow'>ORDER YOUR PIZZA NOW</button>
         </div>
 
     </div>
@@ -37,7 +37,7 @@
                     <img src="/images/mediumpizza.jpg" alt='Medium Pizza'class='img-fluid'>
                 </div>
                 <div class='col-md-4'>
-                    <p>LARGE 500</p>
+                    <p>LARGE 500/-</p>
                     <img src="/images/largepizza.jpg" alt='Large Pizza'class='img-fluid'>
                 </div>
             </div>
@@ -86,10 +86,11 @@
 
     </div>
      <!-- DELIVERY -->
-     <div class='crustSection'>
+     <div class='deliverySection'>
         <div class='container'>
-            <h1 class='text-center'>DELIVERY</h1>
+            <h1 class='text-left'>DELIVERY</h1>
                 <p>We can deliver to your doorstep at a fee of 300/-</p>
+                <p>During this Covid times we have taken extra measures to ensure safety</p>
             
         </div>
     </div>
@@ -97,82 +98,78 @@
 
 
     <!-- ORDER FORM -->
-    <div class='container'>
-        <form>
-            <!-- SIZE OF PIZZA -->
-            <div>
-                <p>Select your pizza size:</p>
-                <select id='sizePizza'>
-                    <option value='small'>Small</option>
-                    <option value='medium'>Medium</option>
-                    <option value='large'>Large</option>
-                </select>
-            </div>
-            
-            <!-- TOPPINGS -->
-            <div>
-                <p>Select your preferred toppings:</p>
-                <select id='toppings'>
-                    <option value='olives'>Olives</option>
-                    <option value='pineapple'>Pineapple</option>
-                    <option value='extra cheese'>Cheese</option>
-                    <option></option>
-                </select>
-            </div>
-            
-            <!-- CRUST -->
-            <div>
-                <p>Select the type of crust:</p>
-                <input type="radio" value='cripsy' id='cripsy' name='crust'>
-                <label for='cripsy'>Crispy</label>
-                <input type="radio" value='stuffed' id='stuffed' name='crust'>
-                <label for='cripsy'>Stuffed</label>
-                <input type="radio" value='gluten-free' id='gluten-free' name='crust'>
-                <label for='cripsy'>Gluten-free</label>
-            </div>
-            
-            <!-- MULTIPLE PIZZAS -->
-            <div>
-                <p>How many pizzas would you like?</p>
-                <input value=amount type="number">
-                <label for='amount'></label>
-
-            </div>
-            <!-- DELIVERY OPTION -->
-            <div>
-                <p>Would you like your pizza delivered?</p>
-                <select>
-                    <option value='Yes'>Yes</option>
-                    <option value='No'>No</option>
-                </select>
-            </div>
+    <section>
+        <div class='container'>
             <form>
-                <div class='deliveryLocation'>
-                    <div class='container'>
-                        <input type="text" placeholder='Type in your location' id='deliveryLoaction'>
-                    </div>
+                <!-- SIZE OF PIZZA -->
+                <div>
+                    <p>Select your pizza size:</p>
+                    <select id='sizePizza'>
+                        <option value='small'>Small</option>
+                        <option value='medium'>Medium</option>
+                        <option value='large'>Large</option>
+                    </select>
                 </div>
                 
+                <!-- TOPPINGS -->
+                <div>
+                    <p>Select your preferred toppings:</p>
+                    <select id='toppings'>
+                        <option value='olives'>Olives</option>
+                        <option value='pineapple'>Pineapple</option>
+                        <option value='extra cheese'>Cheese</option>
+                        <option></option>
+                    </select>
+                </div>
+                
+                <!-- CRUST -->
+                <div>
+                    <p>Select the type of crust:</p>
+                    <input type="radio" value='cripsy' id='cripsy' name='crust'>
+                    <label for='cripsy'>Crispy</label>
+                    <input type="radio" value='stuffed' id='stuffed' name='crust'>
+                    <label for='cripsy'>Stuffed</label>
+                    <input type="radio" value='gluten-free' id='gluten-free' name='crust'>
+                    <label for='cripsy'>Gluten-free</label>
+                </div>
+                
+                <!-- MULTIPLE PIZZAS -->
+                <div>
+                    <p>How many pizzas would you like?</p>
+                    <input value=amount type="number">
+                    <label for='amount'></label>
+    
+                </div>
+                <!-- DELIVERY OPTION -->
+                <div>
+                    <p>Would you like your pizza delivered?</p>
+                    <select>
+                        <option value='Yes'>Yes</option>
+                        <option value='No'>No</option>
+                    </select>
+                </div>
+                <form>
+                    <div class='deliveryLocation'>
+                        <div class='container'>
+                            <input type="text" placeholder='Type in your location' id='deliveryLoaction'>
+                        </div>
+                    </div>
+                    
+                </form>
             </form>
-        </form>
-        <!-- CHECKOUT BUTTON -->
-        <div class='checkout'>
-            <button class='btn btn-light btn-block' type="submit" id="checkout">Checkout</button>
-
+            <!-- CHECKOUT BUTTON -->
+            <div class='checkout'>
+                <button class='btn btn-light btn-block' type="submit" id="checkout">Checkout</button>
+    
+            </div>
+    
         </div>
 
-    </div>
+    </section>
+    
     <footer>
         <p> <strong> PIZZA VILLAGE &copy;2020</strong> </p>
     </footer>
-
-
-
-
-
-
-
-
     <script src="/js/jquery-3.5.1.js"></script>
     <script src="/js/scripts.js"></script>
 </body>
