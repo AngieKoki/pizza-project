@@ -28,50 +28,24 @@ Assuming you are already on github:
 No Known Bugs or dependencies
 
 ## BDD
-### Feature: 
+### Feature: Yes to Delivery 
 ### Description
 As a user
-I want to input my name, birthday and select my gender
-So that I can get an Akan Name
+I want to fill in a form to input my location
+So that I can have my order delivered
 
 ### Scenarios
-#### Name and birthday inputted and gender selected:
+#### Location inputted:
 
-1. Given the name is inputted
-2.    and birthday is inputted
-3.    and gender is selected
-4. When the user clicks on Submit
-5. Then the application generates a valid Akan name
-
-#### Name and Birthday inputted and gender NOT selected:
-
-1. Given the name is inputted
-2.   and birthday is inputted
-3.   and gender is  NOT selected
-4. When the user clicks on Submit
-5. Then the application generates an error message to fill in the necessary field
-
-#### Name inputted and gender selected but birthday not inputted:
-
-1. Given the name is inputted
-2.  and gender is selected
-3.  and birthday is NOT inputted
-4. When the user clicks on Submit
-5. Then the application generates an error message to fill in the necessary field
-
-#### Name inputted but gender NOT selected and birthday NOT inputted:
-
-1. Given the name is inputted
-2.  and gender is NOT selected
-3.  and birthday is NOT inputted
-4. When the user clicks on Submit
-5. Then the application generates an error message to fill in the necessary fields
-
-#### No input in any field:
-
-1. Given no input in any field
+1. Given the location is inputted
 2. When the user clicks on Submit
-3. Then the application generates an error message to fill in the necessary fields
+3.  Then the application alerts the user that the order will be delivered to the specified location
+
+#### Location is NOT inputted:
+
+1. Given the name location is NOT inputted.  
+2. When the user clicks on Submit
+3. Then the application generates an error message to fill in the necessary field
 
 ## Technologies used
 I used: HTML CSS JavaScript jQuery and Bootstrap to create this application
