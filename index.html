@@ -30,15 +30,15 @@
             <div class='row'>
                 <div class='col-md-4'>
                     <p>SMALL 300/-</p>
-                    <img src="/images/smallpizza.jpg" alt='Small Pizza'class='img-fluid'>
+                    <img src="/images/smallpizza.jpg" alt='Small Pizza'class='img-fluid img-resize'>
                 </div>
                 <div class='col-md-4'>
                     <p>MEDIUM 400/-</p>
-                    <img src="/images/mediumpizza.jpg" alt='Medium Pizza'class='img-fluid'>
+                    <img src="/images/mediumpizza.jpg" alt='Medium Pizza'class='img-fluid img-resize'>
                 </div>
                 <div class='col-md-4'>
                     <p>LARGE 500/-</p>
-                    <img src="/images/largepizza.jpg" alt='Large Pizza'class='img-fluid'>
+                    <img src="/images/largepizza.jpg" alt='Large Pizza'class='img-fluid img-resize'>
                 </div>
             </div>
         </div>
@@ -48,17 +48,21 @@
         <div class='container'>
             <h1 class='text-center'>AVAILABLE TOPPINGS</h1>
             <div class='row'>
-                <div class='col-md-4'>
+                <div class='col-md-3'>
                     <p>OLIVES 50/-</p>
-                    <img src="/images/olives.jpg" alt='Olives'class='img-fluid'>
+                    <img src="/images/olives.jpg" alt='Olives'class='img-fluid img-resize'>
                 </div>
-                <div class='col-md-4'>
+                <div class='col-md-3'>
                     <p>PINEAPPLES 50/-</p>
-                    <img src="/images/pineapples.jpg" alt='Pineapples'class='img-fluid'>
+                    <img src="/images/pineapples.jpg" alt='Pineapples'class='img-fluid img-resize'>
                 </div>
-                <div class='col-md-4'>
+                <div class='col-md-3'>
                     <p>EXTRA CHEESE 70/-</p>
-                    <img src="/images/cheese.jpg" alt='Cheese'class='img-fluid'>
+                    <img src="/images/cheese.jpg" alt='Cheese'class='img-fluid img-resize'>
+                </div>
+                <div class='col-md-3'>
+                    <p>MUSHROOMS 70/-</p>
+                    <img src="/images/mushrooms.jpg" alt='Cheese'class='img-fluid img-resize'>
                 </div>
             </div>
         </div>
@@ -71,15 +75,15 @@
             <div class='row'>
                 <div class='col-md-4'>
                     <p>CRISPY 100/-</p>
-                    <img src="/images/crispy.jpg" alt='Crispy'class='img-fluid'>
+                    <img src="/images/crispy.jpg" alt='Crispy'class='img-fluid img-resize'>
                 </div>
                 <div class='col-md-4'>
                     <p>STUFFED 150/-</p>
-                    <img src="/images/stuffed1.jpg" alt='Stuffed'class='img-fluid'>
+                    <img src="/images/stuffed1.jpg" alt='Stuffed'class='img-fluid img-resize'>
                 </div>
                 <div class='col-md-4'>
                     <p>GLUTEN-FREE 50/-</p>
-                    <img src="/images/glutenfree.jpg" alt='Gluten-free'class='img-fluid'>
+                    <img src="/images/glutenfree.jpg" alt='Gluten-free'class='img-fluid img-resize'>
                 </div>
             </div>
         </div>
@@ -91,6 +95,7 @@
             <h1 class='text-left'>DELIVERY</h1>
                 <p>We can deliver to your doorstep at a fee of 300/-</p>
                 <p>During this Covid times we have taken extra measures to ensure safety</p>
+                <button class='btn btn-light' type="submit" id='orderNow'>ORDER YOUR PIZZA NOW</button>
             
         </div>
     </div>
@@ -98,7 +103,7 @@
 
 
     <!-- ORDER FORM -->
-    <section>
+    <section class='orderForm'>
         <div class='container'>
             <form>
                 <!-- SIZE OF PIZZA -->
@@ -118,6 +123,7 @@
                         <option value='olives'>Olives</option>
                         <option value='pineapple'>Pineapple</option>
                         <option value='extra cheese'>Cheese</option>
+                        <option value='mushrooms'>Mushrooms</option>
                         <option></option>
                     </select>
                 </div>
