@@ -9,20 +9,37 @@
 </head>
 <body>
     <!-- LANDING PAGE -->
-    <div class='container'>
-            <div id='view'>
-                <p class='text-center'>WELCOME TO THE PIZZA VILLAGE</p>
-            </div>
-            <div>
-                <p>Pizza Village is a vegan restaurant that provides you with the best vegan pizzas, handcrafted with love at very affrodable prices </p>
-                <p>ORDER YOUR PIZZA NOW</p>
-            </div>
-
-        </div>
+    <div class='view'>
+        <p class='intro'>WELCOME TO THE PIZZA VILLAGE</p>
+        
     </div>
+    <div>
+        <div class='aboutUs'>
+            <h1>ABOUT US</h1>
+            <p>Pizza Village is a vegan restaurant that provides you with the best vegan pizzas, handcrafted with love at very affrodable prices </p>
+            <p>ORDER YOUR PIZZA NOW</p>
+        </div>
+
+    </div>
+    
 
     <!-- PIZZA SIZES -->
     <div class='pizzaSizes'>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-md-4'>
+                    <img src="/images/smallpizza.jpg" alt='Small Pizza'class='img-fluid'>
+                </div>
+                <div class='col-md-4'>
+                    <img src="/images/mediumpizza.jpg" alt='Medium Pizza'class='img-fluid'>
+                </div>
+                <div class='col-md-4'>
+                    <img src="/images/largepizza.jpg" alt='Large Pizza'class='img-fluid'>
+                </div>
+
+            </div>
+
+        </div>
         
 
     </div>
@@ -82,20 +99,23 @@
             <!-- DELIVERY OPTION -->
             <div>
                 <p>Would you like your pizza delivered?</p>
-                <input type="radio" value='yes' id=delivery >
-                <label for='delivery'>Yes</label>
-                <input type="radio" value='no' id=delivery >
-                <label for='delivery'>No</label>
+                <select>
+                    <option value='Yes'>Yes</option>
+                    <option value='No'>No</option>
+                </select>
             </div>
             <form>
-                <div class='container'>
-                    <input type="text" placeholder='Type in your location' id='deliveryLoaction'>
+                <div class='deliveryLocation'>
+                    <div class='container'>
+                        <input type="text" placeholder='Type in your location' id='deliveryLoaction'>
+                    </div>
                 </div>
+                
             </form>
         </form>
         <!-- CHECKOUT BUTTON -->
         <div class='checkout'>
-            <button class='btn-danger btn-block' type="submit" id="checkout"></button>
+            <button class='btn btn-light btn-block' type="submit" id="checkout">Checkout</button>
 
         </div>
 
