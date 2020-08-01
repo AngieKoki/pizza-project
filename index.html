@@ -8,6 +8,63 @@
     <title>Pizza Village</title>
 </head>
 <body>
+<!-- LANDING PAGE -->
+    <div class='container'>
+            <div id='view'>
+                <p class='text-center'>WELCOME TO THE PIZZA VILLAGE</p>
+            </div>
+            <div>
+                <p>Pizza Village is a vegan restaurant that provides you with the best vegan pizzas, handcrafted with love </p>
+                <p>ORDER YOUR PIZZA NOW</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ORDER FORM -->
+    <div class='container'>
+        <form>
+            <!-- SIZE OF PIZZA -->
+            <select id='sizePizza'>
+                <option value='small'>Small</option>
+                <option value='medium'>Medium</option>
+                <option value='large'>Large</option>
+            </select>
+            <!-- TOPPINGS -->
+            <select id='toppings'>
+                <option value='olives'>Olives</option>
+                <option value='pineapple'>Pineapple</option>
+                <option value='extra cheese'>Cheese</option>
+                <option></option>
+            <!-- CRUST -->
+            <input type="radio" value='cripsy' id='cripsy' name='crust'>
+            <label for='cripsy'>Crispy</label>
+            <input type="radio" value='stuffed' id='stuffed' name='crust'>
+            <label for='cripsy'>Stuffed</label>
+            <input type="radio" value='gluten-free' id='gluten-free' name='crust'>
+            <label for='cripsy'>Gluten-free</label>
+            <!-- MULTIPLE PIZZAS -->
+            <p>How many pizzas would you like</p>
+            <input value=amount type="number">
+            <label for='amount'></label>
+            <!-- DELIVERY OPTION -->
+            <p>Would you like your pizza delivered</p>
+            <input type="radio" value='yes' id=delivery >
+            <label for='delivery'>Yes</label>
+            <input type="radio" value='no' id=delivery >
+            <label for='delivery'>No</label>
+            <form>
+                <div class='container'>
+                    <input type="text" value='location' id='deliveryLoaction'>
+                </div>
+            </form>
+        </form>
+
+
+    </div>
+
+<!-- CHECKOUT BUTTON -->
+
 
 
 
