@@ -32,10 +32,7 @@ body{
     margin-top: 1rem;
 
 }
-img{
-    height: 300px;
-    width: 300px;
-}
+
 .deliveryLocation{
     display:none;
 }
