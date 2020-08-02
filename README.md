@@ -28,7 +28,39 @@ Assuming you are already on github:
 No Known Bugs or dependencies
 
 ## BDD
-### Feature: Yes to Delivery 
+### Feature:Select multiple Pizzas of the same order details
+### Description
+As a user
+I want to select how many pizzas of the same order I want
+
+### Scenarios
+#### User selects yes to add a new order:
+
+1. Given the user fills in the number of pizzas of the same pizza order 
+2. When the user clicks on Submit
+3. Then the application generates the total bill of the ordered pizzas
+
+### Feature: Add an order for a different Pizza
+### Description
+As a user
+I want to re-fill a form 
+So that I can add an order for a different pizza
+
+### Scenarios
+#### User selects yes to add a new order:
+
+1. Given the user selects yes to add a different pizza to the order
+2. When the user clicks on Submit
+3. Then the application generates a new form to fill in the details of the new order
+
+#### User select no to add a new order:
+
+1. Given the user selects no to add a different pizza to the order
+2. Then the user will select if they want their order delivered or not
+3. When the user clicks on Submit
+4. Then the total bill will be outputted after.
+
+### Feature: Yes to Delivery Option
 ### Description
 As a user
 I want to fill in a form to input my location
@@ -46,6 +78,19 @@ So that I can have my order delivered
 1. Given the name location is NOT inputted.  
 2. When the user clicks on Submit
 3. Then the application generates an error message to fill in the necessary field
+
+### Feature: No to Delivery Option
+### Description
+As a user
+I want to say no to the delivery option 
+So that I can checkout and see the total
+
+### Scenario
+#### No is selected in the delivery option:
+
+1. Given no is selected to the delivery option
+2. When the user clicks on Submit
+3.  Then the application generates the total amount to be paid
 
 ## Technologies used
 I used: HTML CSS JavaScript jQuery and Bootstrap to create this application
