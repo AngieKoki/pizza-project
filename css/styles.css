@@ -25,6 +25,7 @@ body{
     font-weight: bold;
 }
 .aboutUs{
+    font-size: 23px;
     text-align: center;
     background: #fff;
     color:#333;
@@ -51,7 +52,9 @@ body{
 }
 .img-resize{
     height: 300px;
-    width: 350px;
+    width: 400px;
+    object-fit: fill;
+    object-position: center;
 }
   
 img:hover {
@@ -65,6 +68,9 @@ img:hover {
 }
 .checkout{
     margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.orderNow{
     margin-bottom: 2rem;
 }
 footer{

@@ -17,7 +17,7 @@
         <div class='aboutUs'>
             <h1>ABOUT US</h1>
             <p>Pizza Village is a vegan restaurant that provides you with the best vegan pizzas, handcrafted with love at very affrodable prices </p>
-            <button class='btn btn-light' type="submit" id='orderNow'>ORDER YOUR PIZZA NOW</button>
+            <button class='orderNow btn btn-light' type="submit" >ORDER YOUR PIZZA NOW</button>
         </div>
 
     </div>
@@ -95,7 +95,8 @@
             <h1 class='text-left'>DELIVERY</h1>
                 <p>We can deliver to your doorstep at a fee of 300/-</p>
                 <p>During this Covid times we have taken extra measures to ensure safety</p>
-                <button class='btn btn-light' type="submit" id='orderNow'>ORDER YOUR PIZZA NOW</button>
+                <p>Of our riders and of you</p>
+                <button class='orderNow btn btn-light' type="submit">ORDER YOUR PIZZA NOW</button>
             
         </div>
     </div>
@@ -103,8 +104,9 @@
 
 
     <!-- ORDER FORM -->
-    <section class='orderForm'>
+    <div class='orderForm'>
         <div class='container'>
+            <h1>Fill in this form to order</h1>
             <form>
                 <!-- SIZE OF PIZZA -->
                 <div>
@@ -141,17 +143,25 @@
                 
                 <!-- MULTIPLE PIZZAS -->
                 <div>
-                    <p>How many pizzas would you like?</p>
+                    <p>How many pizzas of this order would you like?</p>
                     <input value=amount type="number">
                     <label for='amount'></label>
-    
                 </div>
+                <div>
+                    <p>Would you like to add an order of a different pizza?</p>
+                <select>
+                    <option value='Yes'>Yes</option>
+                    <option value='No'>No</option>
+                </select>
+
+                </div>
+            
                 <!-- DELIVERY OPTION -->
                 <div>
                     <p>Would you like your pizza delivered?</p>
                     <select>
-                        <option value='Yes'>Yes</option>
-                        <option value='No'>No</option>
+                        <option id='yes' value='Yes'>Yes</option>
+                        <option id='no' value='No'>No</option>
                     </select>
                 </div>
                 <form>
@@ -171,7 +181,7 @@
     
         </div>
 
-    </section>
+    </div>
     
     <footer>
         <p> <strong> PIZZA VILLAGE &copy;2020</strong> </p>
