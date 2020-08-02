@@ -36,7 +36,7 @@ I want to select how many pizzas of the same order I want
 ### Scenarios
 #### User selects yes to add a new order:
 
-1. Given the user fills in the number of pizzas of the same pizza order 
+1. Given the user fills in the number of pizzas they want of the same pizza order 
 2. When the user clicks on Submit
 3. Then the application generates the total bill of the ordered pizzas
 
@@ -46,7 +46,7 @@ As a user
 I want to re-fill a form 
 So that I can add an order for a different pizza
 
-### Scenarios
+### Scenario
 #### User selects yes to add a new order:
 
 1. Given the user selects yes to add a different pizza to the order
@@ -83,7 +83,7 @@ So that I can have my order delivered
 ### Description
 As a user
 I want to say no to the delivery option 
-So that I can checkout and see the total
+So that I can checkout and see the total amount to be paid
 
 ### Scenario
 #### No is selected in the delivery option:
