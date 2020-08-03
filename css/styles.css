@@ -27,16 +27,33 @@ body{
 .aboutUs{
     font-size: 23px;
     text-align: center;
-    background: #fff;
-    color:#333;
+    color:#fff;
     border-radius: 80px;
-    margin-top: 1rem;
+    border-color: #fff;
+    border-style: solid;
+    margin: 1rem;
 
 }
 .crustSection{
-    margin-bottom: 1rem;
+    margin: 1rem;
+    padding-bottom: 2rem;
     border-radius: 80px;
-    border-color: #333 10px;
+    border-color: #fff;
+    border-style: solid;
+}
+.toppingSection{
+    margin: 1rem;
+    padding-bottom: 2rem;
+    border-radius: 80px;
+    border-color: #fff;
+    border-style: solid;
+}
+.pizzaSizes{
+    margin: 1rem;
+    padding-bottom: 2rem;
+    border-radius: 80px;
+    border-color: #fff;
+    border-style: solid;
 }
 .deliverySection{
     background: url(/images/covidDelivery.jpg)no-repeat center/cover;
@@ -61,7 +78,16 @@ img:hover {
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 .orderForm{
+    margin: 1rem;
     display:none;
+    text-align: center;
+    border-radius: 100px;
+    border-color: #fff;
+    border-style: solid;
+}
+.orderbox{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .deliveryLocation{
     display:none;

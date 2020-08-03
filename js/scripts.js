@@ -16,12 +16,18 @@ priceTopping['pineapples']=50;
 priceTopping['extracheese']=70;
 priceTopping['mushrooms']=70;
 
+//Delivery Price
+var deliveryYes=300;
+var deliveryNo=0;
+
 //Order Details
 var size='';
 var crust='';
 var toppings=[];
 var howMany='';
+var delivery='';
 var grandTotal='';
+
 
 //Total Amount
 function total(){
@@ -39,6 +45,7 @@ $(document).ready(function(){
         $('.orderNow').slideUp();
     });
      $('#checkout').click(function(){
+        $('.grandTotal').show();
         $('.orderNow').slideDown();
         $('.orderForm').hide();
     });
@@ -62,6 +69,25 @@ function getSize(){
     
 
 //Toppings Manipulation
+function getToppings(){
+    var toppings = document.getElementsByName('topping[]');
+    var selectedToppings = [].filter.call(toppings, function(c) {
+      return c.checked;
+    }).map((c) => c.value);
+    console.log(selectedToppings);
+    if(selectedToppings.length <=0) {
+        alert('Please select a topping of your choice');
+        return [];
+    } 
+    else {
+        toppings=0;
+        for(var i=0; i< selectedToppings.length; i++) {
+          toppings+=priceTopping[selectedToppings[i]]
+    } 
+    toppings = parseInt(toppings);
+    return selectedToppings;
+    }     
+  }
 
 //Crust Manipulation
 function getCrust(){    
@@ -79,33 +105,51 @@ function getCrust(){
 }
 
 
-//Multiple Pizza Manipulation
+// //Multiple Pizza Manipulation
+// document.getElementById("addOrder").addEventListener("click", function getOrder(){
+//     getSize();
+//     getCrust();
+//     getToppings();
+//     total();
+// });
 
 //Delivery Manipulation
-$(document).ready(function(){
-    $('.checkout').click(function(){
+// $(document).ready(function(){
+//     $('.checkout').click(function(){
         
-    })
-})
-document.getElementById('checkout').addEventListener('click',
-function submit(event){
-    event.preventDefault();
-    var deliveryYes = document.getElementById('yes').value;
-    var deliveryNo = document.getElementById('no').value;
-    var locationForm=document.getElementById('deliveryLocation').value;
+//     })
+// })
+// document.getElementById('checkout').addEventListener('click',
+// function submit(event){
+//     event.preventDefault();
+//     var deliveryYes = document.getElementById('yes').value;
+//     var deliveryNo = document.getElementById('no').value;
+//     var locationForm=document.getElementById('deliveryLocation').value;
     
-    if (deliveryYes ==='Yes'){
+//     if (deliveryYes ==='Yes'){
+//         alert('Cost of delivery is 300/-.Fill in your location details');
+//         prompt(locationForm);
+//         alert('Your order will be delivered to ' + locationForm);
+//     }
+//     else if(deliveryNo ==='No'){
+//         alert('The total cost of your order is ');
+//     }
+//     else {
+//         alert('Please select yes/no to the delivery option');
+//     }
+// });
+function getDelivery(){    
+    if(document.getElementById("yes").checked){
+        delivery = deliveryYes;
         alert('Cost of delivery is 300/-.Fill in your location details');
-        prompt(locationForm);
+        var locationForm=prompt(getElementById('deliveryLocation'));
+        
         alert('Your order will be delivered to ' + locationForm);
     }
-    else if(deliveryNo ==='No'){
-        alert('The total cost of your order is ');
+    else if(document.getElementById("no").checked) {
+        delivery= deliveryNo;
     }
-    else {
-        alert('Please select yes/no to the delivery option');
-    }
-});
+}
         
 //Location textarea
         //Alert
