@@ -2,6 +2,7 @@
 
 
 
+
 //FRONT END LOGIC
 //Order Now button
 $(document).ready(function(){
@@ -14,7 +15,6 @@ $(document).ready(function(){
         $('.orderForm').hide();
     });
 });
-   
 // Order form
 
     //Size of Pizza Manipulation
@@ -26,7 +26,12 @@ $(document).ready(function(){
     //Multiple Pizza Manipulation
 
 //Delivery Manipulation
-document.getElementById('submit').addEventListener('click',
+$(document).ready(function(){
+    $('.checkout').click(function(){
+        
+    })
+})
+document.getElementById('checkout').addEventListener('click',
 function submit(event){
     event.preventDefault();
     var deliveryYes = document.getElementById('yes').value;
@@ -45,7 +50,8 @@ function submit(event){
         alert('Please select yes/no to the delivery option');
     }
 });
-        //Location textarea
+        
+//Location textarea
         //Alert
 
 // Checkout button
