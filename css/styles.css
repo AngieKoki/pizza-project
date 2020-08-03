@@ -73,6 +73,9 @@ img:hover {
 .orderNow{
     margin-bottom: 2rem;
 }
+.grandTotal{
+    display: none;
+}
 footer{
     text-align: center;
 }

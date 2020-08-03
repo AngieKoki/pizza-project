@@ -1,5 +1,33 @@
 //BUSINESS LOGIC
+//Pizza Prices on size
+var small= 300;
+var medium=400;
+var large=500;
 
+//Crust Price 
+var crispy=100;
+var stuffed=150;
+var glutenFree=50;
+
+//Topping Prices
+var priceTopping =[];
+priceTopping['olives']=50;
+priceTopping['pineapples']=50;
+priceTopping['extracheese']=70;
+priceTopping['mushrooms']=70;
+
+//Order Details
+var size='';
+var crust='';
+var toppings=[];
+var howMany='';
+var grandTotal='';
+
+//Total Amount
+function total(){
+    totalAmt=0;
+    totalAmt= size + crust +toppings
+}
 
 
 
@@ -17,13 +45,41 @@ $(document).ready(function(){
 });
 // Order form
 
-    //Size of Pizza Manipulation
+//Size of Pizza Manipulation
+function getSize(){    
+    if(document.getElementById("small").checked){
+        size = small;
+    }else if(document.getElementById("medium").checked){
+        size = medium;
+    }
+    else if(document.getElementById("large").checked){
+        size = large;
+    }
+    else{
+        alert('Please pick a pizza size');
+    }
+}
+    
 
-    //Toppings Manipulation
+//Toppings Manipulation
 
-    //Crust Manipulation
+//Crust Manipulation
+function getCrust(){    
+    if(document.getElementById("crispy").checked){
+        crust = crispy;
+    }else if(document.getElementById("stuffed").checked){
+        crust = stuffed;
+    }
+    else if(document.getElementById("glutenFree").checked){
+        crust = glutenFree;
+    }
+    else{
+        alert('Please pick your a pizza crust');
+    }
+}
 
-    //Multiple Pizza Manipulation
+
+//Multiple Pizza Manipulation
 
 //Delivery Manipulation
 $(document).ready(function(){
