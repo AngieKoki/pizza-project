@@ -44,7 +44,7 @@ $(document).ready(function(){
         $('.orderForm').show();
         $('.orderNow').slideUp();
     });
-     $('#checkout').click(function(){
+    $('#checkout').click(function(){
         $('.grandTotal').show();
         $('.orderNow').slideDown();
         $('.orderForm').hide();
@@ -143,7 +143,7 @@ function getDelivery(){
         delivery = deliveryYes;
         alert('Cost of delivery is 300/-.Fill in your location details');
         var locationForm=prompt(getElementById('deliveryLocation'));
-        
+
         alert('Your order will be delivered to ' + locationForm);
     }
     else if(document.getElementById("no").checked) {
