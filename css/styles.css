@@ -89,18 +89,12 @@ img:hover {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
-.deliveryLocation{
-    display:none;
-}
 .checkout{
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 .orderNow{
     margin: 2rem;
-}
-.grandTotal{
-    display: none;
 }
 footer{
     text-align: center;

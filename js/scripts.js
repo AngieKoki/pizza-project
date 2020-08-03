@@ -1,157 +1,196 @@
-//BUSINESS LOGIC
-//Pizza Prices on size
-var small= 300;
-var medium=400;
-var large=500;
-
-//Crust Price 
-var crispy=100;
-var stuffed=150;
-var glutenFree=50;
-
-//Topping Prices
-var priceTopping =[];
-priceTopping['olives']=50;
-priceTopping['pineapples']=50;
-priceTopping['extracheese']=70;
-priceTopping['mushrooms']=70;
-
-//Delivery Price
-var deliveryYes=300;
-var deliveryNo=0;
-
-//Order Details
-var size='';
-var crust='';
-var toppings=[];
-var howMany='';
-var delivery='';
-var grandTotal='';
-
-
-//Total Amount
-function total(){
-    totalAmt=0;
-    totalAmt= size + crust +toppings
-}
-
-
-
-//FRONT END LOGIC
 //Order Now button
 $(document).ready(function(){
     $('.orderNow').click(function(){
-        $('.orderForm').show();
-        $('.orderNow').slideUp();
-    });
-    $('#checkout').click(function(){
-        $('.grandTotal').show();
-        $('.orderNow').slideDown();
-        $('.orderForm').hide();
-    });
+        $('.orderForm').toggle();
+    //     $('.orderNow').slideUp();
+     });
+    $('#pizzaform').submit(function(event) {
+        event.preventDefault();
+        function size() {
+          var pizzaSize = document.getElementById("sizePizza").value;
+          return parseInt(pizzaSize);
+        }
+        function crust() {
+          var pizzaCrust = document.getElementById("crust").value;
+          return parseInt(pizzaCrust);
+        }
+        function topping() {
+          var pizzaTopping = document.getElementById("topping").value;
+          return parseInt(pizzaTopping);
+        }
+        function number() {
+          var pizzaNumber = document.getElementById("quantity").value;
+          return parseInt(pizzaNumber);
+        }
+        function delivery() {
+            var pizzaDelivery = document.getElementById("delivery").value;
+            return parseInt(pizzaDelivery);
+        }
+    
+        function Order(size, crust, topping, quantity, delivery) {
+          this.newSize = size;
+          this.newCrust = crust;
+          this.newTopping = topping;
+          this.newQuantity = quantity;
+          this.newDelivery = delivery;
+          
+        }
+    
+        var userInput = new Order(size(), crust(), topping(), number(), delivery());
+    
+        //a variable to store the total expenditure of the user
+        var totalCost =
+          (userInput.newSize +
+            userInput.newCrust +
+            userInput.newTopping) *
+            userInput.newQuantity;
+    
+        //prompts for the user
+        if(pizzaDelivery===2){
+            alert(userInput());
+            alert('Your total is: ' + totalCost);
+            alert('Enjoy your Pizza!')
+        }
+        else if(pizzaDelivery===1){
+            var location=prompt('Input delivery location')
+            alert('Your pizza will be delivered to ' + location)
+            alert('Your total is: ' + totalCost);
+            alert('Thank you! Your order will arrive in an hour')
+        }
+        //a method to reset the form after all operations have been completed
+        // $("#pizzaForm").reset();
+    
+        event.preventDefault();
+      });
 });
+
+// //Order Details 
+// function Order (size,crust,toppings) {
+//     this.size= size;
+//     this.crust= crust;
+//     this.toppings=toppings;
+// };
+// Order.prototype.results= function(){
+//     return 'Your order is a ' + this.size + ' with a ' + this.crust + ' and ' + this.toppings + ' for your toppings.'
+// };
+
+// //Total Amount
+// function Total(price,crust,toppings,quantity,delivery){
+//     this.price=price;
+//     this.crust=crust;
+//     this.toppings=toppings;
+//     this.quantity=quantity;
+//     this.delivery=delivery;
+// };
+// Total.prototype.finalTotal=function(){
+//     return (this.price + this.crust + this.toppings +this.delivery)*this.quantity;
+// };
+
+// //BUSINESS LOGIC
+
+// var sizePrices=[300,400,500];
+
+// //Crust Price 
+// var crustPrices=[100,150,50];
+// var crustNames=['crispy','stuffed','glutenFree'];
+
+// //Topping Prices
+// var toppingPrices =[50, 50, 70, 70];
+// var toppingNames=['olives', 'pineapples','extracheese', 'mushrooms'];
+
+// //Delivery Price
+// var deliveryPrices=[0,300];
+
 // Order form
-
-//Size of Pizza Manipulation
-function getSize(){    
-    if(document.getElementById("small").checked){
-        size = small;
-    }else if(document.getElementById("medium").checked){
-        size = medium;
-    }
-    else if(document.getElementById("large").checked){
-        size = large;
-    }
-    else{
-        alert('Please pick a pizza size');
-    }
-}
-    
-
-//Toppings Manipulation
-function getToppings(){
-    var toppings = document.getElementsByName('topping[]');
-    var selectedToppings = [].filter.call(toppings, function(c) {
-      return c.checked;
-    }).map((c) => c.value);
-    console.log(selectedToppings);
-    if(selectedToppings.length <=0) {
-        alert('Please select a topping of your choice');
-        return [];
-    } 
-    else {
-        toppings=0;
-        for(var i=0; i< selectedToppings.length; i++) {
-          toppings+=priceTopping[selectedToppings[i]]
-    } 
-    toppings = parseInt(toppings);
-    return selectedToppings;
-    }     
-  }
-
-//Crust Manipulation
-function getCrust(){    
-    if(document.getElementById("crispy").checked){
-        crust = crispy;
-    }else if(document.getElementById("stuffed").checked){
-        crust = stuffed;
-    }
-    else if(document.getElementById("glutenFree").checked){
-        crust = glutenFree;
-    }
-    else{
-        alert('Please pick your a pizza crust');
-    }
-}
-
-
-// //Multiple Pizza Manipulation
-// document.getElementById("addOrder").addEventListener("click", function getOrder(){
-//     getSize();
-//     getCrust();
-//     getToppings();
-//     total();
-// });
-
-//Delivery Manipulation
 // $(document).ready(function(){
-//     $('.checkout').click(function(){
+//     $('form#pizzaform').submit(function(event){
+//         event.preventDefault();
+//         var pizzaSize = parseInt($('#sizePizza').val());
+//         var pizzaQuantity= parseInt($('#quantity').val());
+//         var pizzaDelivery=parseInt($('#delivery').val());
+//         var pizzaToppings=parseInt($('#topping').val());
+//         var pizzaTop=$('#topping').val();
+//         var pizzaCrust=parseInt($('#crust').val());
+//         var sizeCost=sizePrices[pizzaSize-1]
+//         var deliveryCost= deliveryPrices[pizzaDelivery-1];
+//         var toppingsCost=pizzaToppings[toppingPrice-1];
+//         var crustCost= crustPrices[pizzaCrust-1];
+//         var topNames= toppingNames[pizzaTop-1];
+//         var crustName=crustNames[pizzaCrust-1];
         
-//     })
-// })
-// document.getElementById('checkout').addEventListener('click',
-// function submit(event){
-//     event.preventDefault();
-//     var deliveryYes = document.getElementById('yes').value;
-//     var deliveryNo = document.getElementById('no').value;
-//     var locationForm=document.getElementById('deliveryLocation').value;
-    
-//     if (deliveryYes ==='Yes'){
-//         alert('Cost of delivery is 300/-.Fill in your location details');
-//         prompt(locationForm);
-//         alert('Your order will be delivered to ' + locationForm);
-//     }
-//     else if(deliveryNo ==='No'){
-//         alert('The total cost of your order is ');
-//     }
-//     else {
-//         alert('Please select yes/no to the delivery option');
-//     }
+//         newOrder = new Order(pizzaSize, crustName, topNames);
+//         newTotal = new Total(sizeCost,toppingsCost,crustCost, pizzaQuantity,deliveryCost)
+            
+//         if(pizzaDelivery===1){
+//             alert(newOrder.results());
+//             alert('Your total is: ' + newTotal.finalTotal());
+//             alert('Enjoy your Pizza!')
+//         }
+//         else if(pizzaDelivery===2){
+//             var location=prompt('Input delivery location')
+//             alert('Your pizza will be delivered to ' + location)
+//             alert('Your total is: ' + newTotal.finalTotal());
+//             alert('Thank you! Your order will arrive in an hour')
+//         }
+//     });
 // });
-function getDelivery(){    
-    if(document.getElementById("yes").checked){
-        delivery = deliveryYes;
-        alert('Cost of delivery is 300/-.Fill in your location details');
-        var locationForm=prompt(getElementById('deliveryLocation'));
+// $(document).ready(function() {
+//       $('#pizzaform').submit(function(event) {
+//         function size() {
+//           var pizzaSize = document.getElementById("sizePizza").value;
+//           return parseInt(pizzaSize);
+//         }
+//         function crust() {
+//           var pizzaCrust = document.getElementById("crust").value;
+//           return parseInt(pizzaCrust);
+//         }
+//         function topping() {
+//           var pizzaTopping = document.getElementById("topping").value;
+//           return parseInt(pizzaTopping);
+//         }
+//         function number() {
+//           var pizzaNumber = document.getElementById("quantity").value;
+//           return parseInt(pizzaNumber);
+//         }
+//         function delivery() {
+//             var pizzaDelivery = document.getElementById("delivery").value;
+//             return parseInt(pizzaDelivery);
+//         }
+    
+//         function Order(size, crust, topping, quantity, delivery) {
+//           this.newSize = size;
+//           this.newCrust = crust;
+//           this.newTopping = topping;
+//           this.newQuantity = quantity;
+//           this.newDelivery = delivery;
+          
+//         }
+    
+//         var userInput = new Order(size(), crust(), topping(), number(), delivery());
+    
+//         //a variable to store the total expenditure of the user
+//         var totalCost =
+//           (userInput.newSize +
+//             userInput.newCrust +
+//             userInput.newTopping) *
+//             userInput.newQuantity;
+    
+//         //prompts for the user
+//         if(pizzaDelivery===2){
+//             alert(userInput());
+//             alert('Your total is: ' + totalCost);
+//             alert('Enjoy your Pizza!')
+//         }
+//         else if(pizzaDelivery===1){
+//             var location=prompt('Input delivery location')
+//             alert('Your pizza will be delivered to ' + location)
+//             alert('Your total is: ' + totalCost);
+//             alert('Thank you! Your order will arrive in an hour')
+//         }
+//         //a method to reset the form after all operations have been completed
+//         // $("#pizzaForm").reset();
+    
+//         event.preventDefault();
+//       });
+//     });
 
-        alert('Your order will be delivered to ' + locationForm);
-    }
-    else if(document.getElementById("no").checked) {
-        delivery= deliveryNo;
-    }
-}
-        
-//Location textarea
-        //Alert
-
-// Checkout button
