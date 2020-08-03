@@ -2,7 +2,7 @@
 $(document).ready(function(){
     $('.orderNow').click(function(){
         $('.orderForm').toggle();
-    //     $('.orderNow').slideUp();
+        $('.orderNow').slideUp();
      });
     $('#pizzaform').submit(function(event) {
         event.preventDefault();

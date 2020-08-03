@@ -113,12 +113,14 @@
                 <!-- TOPPINGS -->
                 <div class='orderbox'>
                     <p class='font-weight-bold'>Select your preferred toppings:</p>
-                    <select id='topping' required >
-                        <option value='50'>Olives 50</option>
-                        <option value='50'>Pineapples 50</option>
-                        <option value='70'>Extra Cheese 70</option>
-                        <option value='70'>Mushrooms 70</option>
-                    </select>
+                    <input type="checkbox" required id="topping" value='50'>
+                    <label for='olives'>Olives 50/-</label>
+                    <input type="checkbox" required id="topping" value='50'>
+                    <label for='pineapples'>Pineapples 50/- </label>
+                    <input type="checkbox" required id="topping" value='70'>
+                    <label for='extracheese'>Extra Cheese 70/- </label>
+                    <input type="checkbox" required id="topping" value='70'>
+                    <label for='mushrooms'>Mushrooms 70/- </label>
         
                 </div>
                 
@@ -143,7 +145,7 @@
                 <div class='orderbox' required=''>
                     <p class='font-weight-bold'>Would you like your pizza delivered?</p>
                     <select id='delivery'>
-                        <option  value='300'>Yes</option>
+                        <option  value='300'>Yes 300/-</option>
                         <option  value='0'>No</option>
                     </select>
                 </div>
