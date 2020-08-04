@@ -40,26 +40,6 @@ I want to select how many pizzas of the same order I want
 2. When the user clicks on Submit
 3. Then the application generates the total bill of the ordered pizzas
 
-### Feature: Add an order for a different Pizza
-### Description
-As a user
-I want to re-fill a form 
-So that I can add an order for a different pizza
-
-### Scenario
-#### User selects yes to add a new order:
-
-1. Given the user selects yes to add a different pizza to the order
-2. When the user clicks on Submit
-3. Then the application generates a new form to fill in the details of the new order
-
-#### User select no to add a new order:
-
-1. Given the user selects no to add a different pizza to the order
-2. Then the user will select if they want their order delivered or not
-3. When the user clicks on Submit
-4. Then the total bill will be outputted after.
-
 ### Feature: Yes to Delivery Option
 ### Description
 As a user

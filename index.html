@@ -111,13 +111,13 @@
                 <!-- TOPPINGS -->
                 <div class='orderbox'>
                     <p class='font-weight-bold'>Select your preferred toppings:</p>
-                    <input type="checkbox" required id="topping" value='50'>
+                    <input type="checkbox" id="topping" value='50'>
                     <label for='olives'>Olives 50/-</label>
-                    <input type="checkbox" required id="topping" value='50'>
+                    <input type="checkbox"  id="topping" value='50'>
                     <label for='pineapples'>Pineapples 50/- </label>
-                    <input type="checkbox" required id="topping" value='70'>
+                    <input type="checkbox"  id="topping" value='70'>
                     <label for='extracheese'>Extra Cheese 70/- </label>
-                    <input type="checkbox" required id="topping" value='70'>
+                    <input type="checkbox"  id="topping" value='70'>
                     <label for='mushrooms'>Mushrooms 70/- </label>
         
                 </div>
@@ -135,7 +135,15 @@
                 <!-- MULTIPLE PIZZAS -->
                 <div class='orderbox'>
                     <p class='font-weight-bold'>How many pizzas of this order would you like?</p>
-                    <input value='' id='quantity 'type="number" min='1' required>
+                    <p>The maximum number is 5</p>
+                    <!-- <input value='2' id='quantity 'type="number" min='1' required> -->
+                    <select id='quantity' required>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option>
+                        <option value='4'>4</option>
+                        <option value='5'>5</option>
+                    </select>
                     <label for='amount'></label>
                 </div>
             
@@ -149,7 +157,9 @@
                 </div>
                 <!-- CHECKOUT BUTTON -->
                 <div class='checkout'>
-                    <button class='btn btn-success' type="submit" onclick="submit()">Checkout</button>
+                    <button class='btn btn-success' type="submit" >Checkout</button>
+                    
+                    
         
                 </div>
                 
