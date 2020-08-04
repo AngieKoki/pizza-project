@@ -47,14 +47,14 @@ $(document).ready(function(){
             userInput.newQuantity;
     
         if(pizzaDelivery===2){
-            alert('Your order is: '+ userInput());
+            alert('Your order is: '+ userInput);
             alert('Your total is: ' + totalCost);
             alert('Enjoy your Pizza!')
         }
         else if(pizzaDelivery===1){
             var location=prompt('Input delivery location')
             alert('Your pizza will be delivered to ' + location)
-            alert('Your order is: '+ userInput());
+            alert('Your order is: '+ userInput);
             alert('Your total is: ' + totalCost);
             alert('Thank you! Your order will arrive in an hour')
         }
@@ -64,75 +64,4 @@ $(document).ready(function(){
         event.preventDefault();
       });
 });
-
-// //Order Details 
-// function Order (size,crust,toppings) {
-//     this.size= size;
-//     this.crust= crust;
-//     this.toppings=toppings;
-// };
-// Order.prototype.results= function(){
-//     return 'Your order is a ' + this.size + ' with a ' + this.crust + ' and ' + this.toppings + ' for your toppings.'
-// };
-
-// //Total Amount
-// function Total(price,crust,toppings,quantity,delivery){
-//     this.price=price;
-//     this.crust=crust;
-//     this.toppings=toppings;
-//     this.quantity=quantity;
-//     this.delivery=delivery;
-// };
-// Total.prototype.finalTotal=function(){
-//     return (this.price + this.crust + this.toppings +this.delivery)*this.quantity;
-// };
-
-// //BUSINESS LOGIC
-
-// var sizePrices=[300,400,500];
-
-// //Crust Price 
-// var crustPrices=[100,150,50];
-// var crustNames=['crispy','stuffed','glutenFree'];
-
-// //Topping Prices
-// var toppingPrices =[50, 50, 70, 70];
-// var toppingNames=['olives', 'pineapples','extracheese', 'mushrooms'];
-
-// //Delivery Price
-// var deliveryPrices=[0,300];
-
-// Order form
-// $(document).ready(function(){
-//     $('form#pizzaform').submit(function(event){
-//         event.preventDefault();
-//         var pizzaSize = parseInt($('#sizePizza').val());
-//         var pizzaQuantity= parseInt($('#quantity').val());
-//         var pizzaDelivery=parseInt($('#delivery').val());
-//         var pizzaToppings=parseInt($('#topping').val());
-//         var pizzaTop=$('#topping').val();
-//         var pizzaCrust=parseInt($('#crust').val());
-//         var sizeCost=sizePrices[pizzaSize-1]
-//         var deliveryCost= deliveryPrices[pizzaDelivery-1];
-//         var toppingsCost=pizzaToppings[toppingPrice-1];
-//         var crustCost= crustPrices[pizzaCrust-1];
-//         var topNames= toppingNames[pizzaTop-1];
-//         var crustName=crustNames[pizzaCrust-1];
-        
-//         newOrder = new Order(pizzaSize, crustName, topNames);
-//         newTotal = new Total(sizeCost,toppingsCost,crustCost, pizzaQuantity,deliveryCost)
-            
-//         if(pizzaDelivery===1){
-//             alert(newOrder.results());
-//             alert('Your total is: ' + newTotal.finalTotal());
-//             alert('Enjoy your Pizza!')
-//         }
-//         else if(pizzaDelivery===2){
-//             var location=prompt('Input delivery location')
-//             alert('Your pizza will be delivered to ' + location)
-//             alert('Your total is: ' + newTotal.finalTotal());
-//             alert('Thank you! Your order will arrive in an hour')
-//         }
-//     });
-// });
 
